@@ -1,96 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Page title | Sayfa başlığı -->
-  <title>BiU | IT & Automation</title>
-
-  <!-- Responsive settings | Mobil uyumluluk -->
+  <title>BiU | Bilgi Teknolojileri & İletişim Uzmanları</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* ===============================
-       GLOBAL BODY STYLE
-       Genel sayfa ayarları
-    =============================== */
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #e5e7eb;
-      min-height: 100vh;
-
-      /*
-        BACKGROUND LAYERS
-        Arka plan katmanları
-      */
       background:
-        /* Dark gradient (technology mood)
-           Koyu degrade (teknoloji havası) */
-        linear-gradient(
-          135deg,
-          #020617,
-          #0f172a,
-          #020617
-        ),
-
-        /* Diagonal tech grid
-           Diyagonal teknik çizgiler */
+        linear-gradient(120deg, rgba(15,23,42,0.95), rgba(2,6,23,0.95)),
         repeating-linear-gradient(
           45deg,
-          rgba(56,189,248,0.08),
-          rgba(56,189,248,0.08) 1px,
+          rgba(56,189,248,0.05),
+          rgba(56,189,248,0.05) 1px,
           transparent 1px,
-          transparent 16px
+          transparent 14px
         );
-
-      background-blend-mode: overlay;
-      background-attachment: fixed;
-
+      color: #e5e7eb;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      /* Background animation
-         Arka plan hareketi */
-      animation: bgMove 18s linear infinite;
+      min-height: 100vh;
     }
 
-    /* Background motion animation
-       Arka plan hareket animasyonu */
-    @keyframes bgMove {
-      from {
-        background-position: 0 0, 0 0;
-      }
-      to {
-        background-position: 400px 400px, 0 0;
-      }
-    }
-
-    /* ===============================
-       MAIN CONTAINER
-       Ana kutu
-    =============================== */
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       padding: 40px;
       text-align: center;
     }
 
-    /* ===============================
-       LOGO / TITLE
-       Logo / Başlık
-    =============================== */
     h1 {
-      font-size: 3.2rem;
-      margin-bottom: 10px;
+      font-size: 3rem;
       color: #38bdf8;
-
-      /* Glow effect
-         Parlama efekti */
-      text-shadow:
-        0 0 10px rgba(56,189,248,0.6),
-        0 0 25px rgba(56,189,248,0.4);
+      margin-bottom: 10px;
     }
 
     h2 {
@@ -99,106 +43,149 @@
       margin-bottom: 30px;
     }
 
-    /* ===============================
-       DESCRIPTION
-       Açıklama metni
-    =============================== */
     p {
       font-size: 1.1rem;
       line-height: 1.8;
-      margin-bottom: 40px;
+      margin-bottom: 15px;
     }
 
-    /* ===============================
-       SERVICE TAGS
-       Hizmet etiketleri
-    =============================== */
     .tags span {
       display: inline-block;
       margin: 6px;
-      padding: 10px 18px;
-      background: rgba(30,41,59,0.7);
-      border-radius: 25px;
+      padding: 10px 16px;
+      background: #1e293b;
+      border-radius: 20px;
       font-size: 0.9rem;
-      backdrop-filter: blur(6px);
     }
 
-    /* ===============================
-       BUTTONS
-       Butonlar
-    =============================== */
     .buttons {
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
-    .buttons a {
+    .btn {
       display: inline-block;
       margin: 10px;
-      padding: 14px 28px;
+      padding: 12px 26px;
       border-radius: 30px;
       background: linear-gradient(135deg, #38bdf8, #2563eb);
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
-      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .buttons a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(56,189,248,0.5);
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
     }
 
-    /* ===============================
-       FOOTER
-       Alt bilgi
-    =============================== */
+    .lang-switch button {
+      background: #1e293b;
+      color: #e5e7eb;
+      border: none;
+      padding: 8px 14px;
+      margin-left: 6px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .projects {
+      margin-top: 50px;
+    }
+
+    .projects a {
+      display: block;
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 8px 0;
+    }
+
     footer {
-      margin-top: 60px;
-      font-size: 0.85rem;
+      margin-top: 40px;
+      font-size: 0.9rem;
       color: #94a3b8;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <!-- Brand name | Marka adı -->
-    <h1>BiU</h1>
+<div class="lang-switch">
+  <button onclick="setLang('tr')">TR</button>
+  <button onclick="setLang('en')">EN</button>
+</div>
 
-    <!-- Subtitle | Alt başlık -->
-    <h2>Information Technology & Communication Specialists</h2>
+<div class="container">
 
-    <!-- About text | Hakkında -->
-    <p>
-      BiU is a professional technology identity focused on
-      <strong>software engineering</strong>,
-      <strong>web development</strong>, and
-      <strong>automation solutions</strong>.
-      <br>
-      We design efficient, reliable, and scalable systems for modern needs.
-    </p>
+  <h1>BiU</h1>
 
-    <!-- Services | Hizmetler -->
-    <div class="tags">
-      <span>Software Engineering</span>
-      <span>Web Development</span>
-      <span>Automation</span>
-      <span>API Integration</span>
-      <span>System Optimization</span>
-    </div>
+  <h2 id="title">
+    Bilgi Teknolojileri & İletişim Uzmanları
+  </h2>
 
-    <!-- Contact buttons | İletişim butonları -->
-    <div class="buttons">
-      <a href="https://wa.me/905392980597" target="_blank">WhatsApp</a>
-      <a href="https://github.com/BiU-it" target="_blank">GitHub</a>
-    </div>
+  <p id="desc1">
+    BiU, yazılım mühendisliği, web geliştirme ve otomasyon çözümleri
+    alanlarında uzmanlaşmış profesyonel bir teknoloji kimliğidir.
+  </p>
 
-    <!-- Footer | Alt yazı -->
-    <footer>
-      © BiU Team
-    </footer>
+  <p id="desc2">
+    Modern ihtiyaçlara yönelik verimli, güvenilir ve ölçeklenebilir
+    sistemler tasarlıyor ve geliştiriyoruz.
+  </p>
 
+  <div class="tags">
+    <span>Yazılım Mühendisliği</span>
+    <span>Web Geliştirme</span>
+    <span>Otomasyon</span>
+    <span>API Entegrasyonu</span>
+    <span>Sistem Optimizasyonu</span>
   </div>
+
+  <div class="buttons">
+    <a class="btn" href="https://wa.me/905392980597" target="_blank">WhatsApp</a>
+    <a class="btn" href="https://github.com/BiU-it" target="_blank">GitHub</a>
+  </div>
+
+  <div class="projects">
+    <h2 id="projectsTitle">Projelerim</h2>
+
+    <a href="https://alikahyakarot.com/" target="_blank">alikahyakarot.com</a>
+    <a href="https://ilyaskarot.com/" target="_blank">ilyaskarot.com</a>
+    <a href="http://gucluspanzet.com/" target="_blank">gucluspanzet.com</a>
+    <a href="http://anahtarpartisakarya.org/" target="_blank">
+      anahtarpartisakarya.org
+    </a>
+  </div>
+
+  <footer>
+    © BiU Ekibi
+  </footer>
+
+</div>
+
+<script>
+  const texts = {
+    tr: {
+      title: "Bilgi Teknolojileri & İletişim Uzmanları",
+      desc1: "BiU, yazılım mühendisliği, web geliştirme ve otomasyon çözümleri alanlarında uzmanlaşmış profesyonel bir teknoloji kimliğidir.",
+      desc2: "Modern ihtiyaçlara yönelik verimli, güvenilir ve ölçeklenebilir sistemler tasarlıyor ve geliştiriyoruz.",
+      projects: "Projelerim"
+    },
+    en: {
+      title: "Information Technology & Communication Specialists",
+      desc1: "BiU is a professional technology identity focused on software engineering, web development, and automation solutions.",
+      desc2: "We design efficient, reliable, and scalable systems for modern needs.",
+      projects: "My Projects"
+    }
+  };
+
+  function setLang(lang) {
+    document.getElementById("title").innerText = texts[lang].title;
+    document.getElementById("desc1").innerText = texts[lang].desc1;
+    document.getElementById("desc2").innerText = texts[lang].desc2;
+    document.getElementById("projectsTitle").innerText = texts[lang].projects;
+  }
+</script>
+
 </body>
 </html>
