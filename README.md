@@ -1,16 +1,38 @@
-## Hi there 👋
+# 🌐 BiU
+## Information Technology & Communication Specialists
 
-<!--
-**Muthana1989/Muthana1989** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### 👤 Founder: Muthana
+Software Engineer | Web & Automation Specialist
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🧩 About BiU
+BiU is a professional technology identity focused on software engineering,
+web development, automation, and digital solutions.
+We aim to deliver efficient, reliable, and scalable systems for modern businesses.
+
+---
+
+## 🔧 Core Expertise
+- Software Engineering
+- Web Development (Frontend & Backend)
+- Automation & Process Optimization
+- API Integration
+- Database Design & Management
+- System Integration
+
+---
+
+## 📂 Projects
+- 🚀 Automation Projects  
+  https://github.com/Muthana1989/automation-projects
+
+---
+
+## 🎯 Vision
+Building smart, automated, and sustainable digital solutions.
+
+---
+
+## 📫 Contact
+Open to professional opportunities and collaborations.
