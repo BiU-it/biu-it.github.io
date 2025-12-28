@@ -1,247 +1,276 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>BiU | Technology Company</title>
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:Arial, Helvetica, sans-serif;
-  background:#050b16;
-  color:#fff;
-  overflow-x:hidden;
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ===== BACKGROUND CANVAS ===== */
-#bgCanvas{
-  position:fixed;
-  inset:0;
-  z-index:-1;
+/* ========== BODY ========== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #050b16;
+  color: #e5e7eb;
+  overflow: hidden;
 }
 
-/* ===== HEADER ===== */
-header{
-  position:fixed;
-  top:20px;
-  left:20px;
-  right:20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  z-index:10;
+/* ========== BACKGROUND CANVAS ========== */
+#bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
+/* ========== HEADER ========== */
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
 }
 
-.logo-box{
-  width:64px;
-  height:64px;
-  border-radius:14px;
-  background:#4fc3ff;
-  color:#000;
-  font-weight:bold;
-  font-size:28px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 0 25px rgba(79,195,255,.8);
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #38bdf8;
+  border: 2px solid #38bdf8;
+  padding: 8px 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(56,189,248,0.6);
 }
 
-.lang button{
-  background:#1b2536;
-  color:#fff;
-  border:1px solid #4fc3ff;
-  padding:6px 12px;
-  border-radius:8px;
-  margin-left:6px;
-  cursor:pointer;
-}
-.lang .active{
-  background:#4fc3ff;
-  color:#000;
+.lang button {
+  background: #0f172a;
+  color: #e5e7eb;
+  border: 1px solid #38bdf8;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 6px;
 }
 
-/* ===== MAIN ===== */
-main{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:120px 20px;
+.lang button.active {
+  background: #38bdf8;
+  color: #000;
 }
 
-h1{
-  font-size:56px;
-  color:#4fc3ff;
-  margin-bottom:10px;
-}
-h2{
-  font-size:22px;
-  margin-bottom:30px;
-  opacity:.9;
-}
-
-p{
-  max-width:760px;
-  margin:0 auto 20px;
-  line-height:1.8;
-  opacity:.85;
+/* ========== MAIN ========== */
+main {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  justify-content:center;
-  margin:30px 0;
-}
-.tag{
-  background:#111a2b;
-  padding:10px 18px;
-  border-radius:20px;
-  font-size:14px;
+h1 {
+  font-size: 64px;
+  color: #38bdf8;
+  margin-bottom: 10px;
 }
 
-.buttons{
-  margin:30px 0;
+h2 {
+  font-weight: 400;
+  margin-bottom: 25px;
 }
-.btn{
-  display:inline-block;
-  padding:14px 26px;
-  border-radius:30px;
-  font-weight:bold;
-  text-decoration:none;
-  margin:0 8px;
-}
-.whatsapp{background:#25d366;color:#000}
-.github{background:#4fc3ff;color:#000}
 
-/* ===== PROJECTS ===== */
-.projects{
-  margin-top:40px;
+p {
+  max-width: 820px;
+  line-height: 1.8;
+  margin: 0 auto 18px;
 }
-.projects h3{
-  color:#4fc3ff;
-  margin-bottom:15px;
-}
-.projects a{
-  display:block;
-  color:#4fc3ff;
-  text-decoration:none;
-  margin:6px 0;
-  opacity:.8;
-}
-.projects a:hover{opacity:1}
 
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:13px;
-  opacity:.6;
+/* ========== TAGS ========== */
+.tags span {
+  display: inline-block;
+  background: #0f172a;
+  padding: 10px 16px;
+  border-radius: 20px;
+  margin: 6px;
+  font-size: 14px;
+}
+
+/* ========== BUTTONS ========== */
+.buttons a {
+  display: inline-block;
+  padding: 14px 30px;
+  margin: 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+}
+
+.whatsapp {
+  background: #22c55e;
+}
+
+.github {
+  background: #38bdf8;
+  color: #000;
+}
+
+/* ========== PROJECTS ========== */
+.projects {
+  margin-top: 40px;
+}
+
+.projects h3 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+.projects a {
+  display: block;
+  color: #38bdf8;
+  text-decoration: none;
+  margin: 4px 0;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #94a3b8;
 }
 </style>
 </head>
 
 <body>
 
-<!-- BACKGROUND -->
-<canvas id="bgCanvas"></canvas>
+<canvas id="bg"></canvas>
 
 <header>
-  <div class="logo">
-    <div class="logo-box">BiU</div>
-  </div>
+  <div class="logo">BiU</div>
   <div class="lang">
-    <button class="active">TR</button>
-    <button>EN</button>
+    <button id="trBtn" class="active">TR</button>
+    <button id="enBtn">EN</button>
   </div>
 </header>
 
 <main>
-  <div>
+  <div id="content">
     <h1>BiU</h1>
-    <h2>Bilgi Teknolojileri & İletişim Uzmanları</h2>
+    <h2 id="title">Bilgi Teknolojileri & İletişim Uzmanları</h2>
 
-    <p>
+    <p id="p1">
       BiU, yazılım mühendisliği, web geliştirme ve otomasyon çözümleri alanlarında
       uzmanlaşmış kurumsal bir teknoloji şirketidir.
     </p>
 
-    <p>
-      Modern ihtiyaçlara yönelik verimli, güvenilir ve ölçeklenebilir
-      sistemler tasarlıyor ve geliştiriyoruz.
+    <p id="p2">
+      Modern ihtiyaçlara yönelik verimli, güvenilir ve ölçeklenebilir sistemler
+      tasarlıyor ve geliştiriyoruz.
     </p>
 
     <div class="tags">
-      <div class="tag">Yazılım Mühendisliği</div>
-      <div class="tag">Web Geliştirme</div>
-      <div class="tag">Otomasyon</div>
-      <div class="tag">API Entegrasyonu</div>
-      <div class="tag">Sistem Optimizasyonu</div>
+      <span>Yazılım Mühendisliği</span>
+      <span>Web Geliştirme</span>
+      <span>Otomasyon</span>
+      <span>API Entegrasyonu</span>
+      <span>Sistem Optimizasyonu</span>
     </div>
 
     <div class="buttons">
-      <a class="btn whatsapp" href="#">WhatsApp</a>
-      <a class="btn github" href="#">GitHub</a>
+      <a class="whatsapp" href="https://wa.me/905392980597" target="_blank">WhatsApp</a>
+      <a class="github" href="https://github.com/BiU-it" target="_blank">GitHub</a>
     </div>
 
     <div class="projects">
-      <h3>Projelerimiz</h3>
+      <h3 id="projectsTitle">Projelerimiz</h3>
       <a href="https://alikahyakarot.com" target="_blank">alikahyakarot.com</a>
       <a href="https://ilyaskarot.com" target="_blank">ilyaskarot.com</a>
-      <a href="https://gucluspanzet.com" target="_blank">gucluspanzet.com</a>
-      <a href="https://anahtarpartisakarya.org" target="_blank">anahtarpartisakarya.org</a>
+      <a href="http://gucluspanzet.com" target="_blank">gucluspanzet.com</a>
+      <a href="http://anahtarpartisakarya.org" target="_blank">anahtarpartisakarya.org</a>
     </div>
+
+    <footer>© BiU Ekibi</footer>
   </div>
 </main>
 
-<footer>© BiU Ekibi</footer>
-
 <script>
-const canvas = document.getElementById("bgCanvas");
+/* ========== LANGUAGE SWITCH ========== */
+const tr = {
+  title: "Bilgi Teknolojileri & İletişim Uzmanları",
+  p1: "BiU, yazılım mühendisliği, web geliştirme ve otomasyon çözümleri alanlarında uzmanlaşmış kurumsal bir teknoloji şirketidir.",
+  p2: "Modern ihtiyaçlara yönelik verimli, güvenilir ve ölçeklenebilir sistemler tasarlıyor ve geliştiriyoruz.",
+  projects: "Projelerimiz"
+};
+
+const en = {
+  title: "Information Technology & Communication Specialists",
+  p1: "BiU is a corporate technology company specialized in software engineering, web development, and automation solutions.",
+  p2: "We design and develop efficient, secure, and scalable systems for modern needs.",
+  projects: "Our Projects"
+};
+
+const trBtn = document.getElementById("trBtn");
+const enBtn = document.getElementById("enBtn");
+
+function setLang(lang) {
+  document.getElementById("title").innerText = lang.title;
+  document.getElementById("p1").innerText = lang.p1;
+  document.getElementById("p2").innerText = lang.p2;
+  document.getElementById("projectsTitle").innerText = lang.projects;
+}
+
+trBtn.onclick = () => {
+  trBtn.classList.add("active");
+  enBtn.classList.remove("active");
+  setLang(tr);
+};
+
+enBtn.onclick = () => {
+  enBtn.classList.add("active");
+  trBtn.classList.remove("active");
+  setLang(en);
+};
+
+/* ========== BACKGROUND ANIMATION ========== */
+const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
-function resize(){
-  canvas.width = innerWidth;
-  canvas.height = innerHeight;
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
 resize();
-addEventListener("resize", resize);
+window.onresize = resize;
 
-const nodes = [];
-for(let i=0;i<120;i++){
-  nodes.push({
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    v:0.2+Math.random()*0.6,
-    c:Math.random()>0.5?"0":"1"
-  });
-}
+const symbols = Array(150).fill(0).map(() => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  v: 0.3 + Math.random(),
+  t: Math.random() > 0.5 ? "0" : "1"
+}));
 
-function draw(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle="rgba(79,195,255,0.25)";
-  ctx.font="12px monospace";
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(56,189,248,0.35)";
+  ctx.font = "14px monospace";
 
-  nodes.forEach(n=>{
-    ctx.fillText(n.c,n.x,n.y);
-    n.y+=n.v;
-    if(n.y>canvas.height){
-      n.y=-10;
-      n.x=Math.random()*canvas.width;
-      n.c=Math.random()>0.5?"0":"1";
-    }
+  symbols.forEach(s => {
+    ctx.fillText(s.t, s.x, s.y);
+    s.y += s.v;
+    if (s.y > canvas.height) s.y = 0;
   });
 
   requestAnimationFrame(draw);
