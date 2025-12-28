@@ -7,20 +7,34 @@
 
   <style>
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #e5e7eb;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
-        radial-gradient(circle at 80% 30%, rgba(99,102,241,0.15), transparent 45%),
-        radial-gradient(circle at 50% 80%, rgba(34,197,94,0.12), transparent 45%),
-        linear-gradient(180deg, #020617, #020617);
-      overflow: hidden;
-    }
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e5e7eb;
+  min-height: 100vh;
+
+  /* TECH + AUTOMATION BACKGROUND */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.95),
+      rgba(2, 6, 23, 0.95)
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(56, 189, 248, 0.06),
+      rgba(56, 189, 248, 0.06) 1px,
+      transparent 1px,
+      transparent 14px
+    );
+
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
     /* subtle motion lines */
     body::before {
